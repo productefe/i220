@@ -1,0 +1,80 @@
++start 'marjorie jacqueline simpson'
+
+Temporary breakpoint 1 at 0x12c6: file hello.c, line 35.
+Starting program: /import/home/esurucu/i220/submit/lab2-sol/2-hello-upcase-args/hello 'marjorie jacqueline simpson'
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffdff8) at hello.c:35
+35	  if (argc == 1) {
++b upcase_words
+Breakpoint 2 at 0x555555555199: file hello.c, line 13.
++display in
+No symbol "in" in current context.
++c
+Continuing.
+
+Breakpoint 2, upcase_words (in=0x7fffffffe2e4 "marjorie jacqueline simpson", out=0x7fffffffde60 "\200\336\377\377\377\177") at hello.c:13
+13	  int inWord = 0;
++display in
+1: in = 0x7fffffffe2e4 "marjorie jacqueline simpson"
++p strlen(in)
+'strlen' has unknown return type; cast the call to its declared return type
++p strlen(s)
+No symbol "s" in current context.
++p strlen(in)
+'strlen' has unknown return type; cast the call to its declared return type
++p in
+$1 = 0x7fffffffe2e4 "marjorie jacqueline simpson"
++l
+8	 *  has enough space for the strlen(in) characters of in.
+9	 */
+10	void
+11	upcase_words(const char in[], char out[])
+12	{
+13	  int inWord = 0;
+14	  int n = strlen(in);
+15	  for (int i = 0; i < n; i++) {
+16	    if (!inWord && isalpha(in[i])) {
+17	      out[i] = toupper(in[i]);
++q
++start
+Temporary breakpoint 1 at 0x12d5: file hello.c, line 36.
+Starting program: /import/home/esurucu/i220/submit/lab2-sol/2-hello-upcase-args/hello 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=1, argv=0x7fffffffe018) at hello.c:36
+36	  if (argc == 1) {
++b upcase_words
+Breakpoint 2 at 0x555555555199: file hello.c, line 13.
++c
+Continuing.
+[Inferior 1 (process 1107746) exited with code 01]
++display in
+No symbol "in" in current context.
++c
+The program is not being run.
++q
++start 'marjorie jacqueline simpson'
+Temporary breakpoint 1 at 0x12d5: file hello.c, line 36.
+Starting program: /import/home/esurucu/i220/submit/lab2-sol/2-hello-upcase-args/hello 'marjorie jacqueline simpson'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffdff8) at hello.c:36
+36	  if (argc == 1) {
++b upcase_words
+Breakpoint 2 at 0x555555555199: file hello.c, line 13.
++c
+Continuing.
+
+Breakpoint 2, upcase_words (in=0x7fffffffe2e4 "marjorie jacqueline simpson", out=0x7fffffffde60 "\200\336\377\377\377\177") at hello.c:13
+13	  int inWord = 0;
++display in
+1: in = 0x7fffffffe2e4 "marjorie jacqueline simpson"
++c
+Continuing.
+[Inferior 1 (process 1109461) exited normally]
++q
