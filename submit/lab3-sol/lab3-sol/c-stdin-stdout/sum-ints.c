@@ -34,7 +34,7 @@ main(int argc, const char *argv[])
     exit(1);
   }
 
-  FILE *out = argc < 3 ? stdout : fopen(argv[2], "w");
+  FILE *out = argc < 3 ||strcmp(argv[2], "-") == 0 ? stdout : fopen(argv[2], "w");
   if (!out) {
     fprintf(stderr, "cannot write %s: %s\n", argv[2], strerror(errno));
     exit(1);
