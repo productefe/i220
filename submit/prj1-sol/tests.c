@@ -86,23 +86,18 @@ static void get_bit_at_offset_test(const Byte bytes[], unsigned offset,
 static void get_bit_at_offset_tests(void) {
   const Byte bytes[] = { 0x1a, 0x23, 0x46 };
 
-  //least significant but of 0x23
   const unsigned offset1 = BYTE_SIZE == 2 ? 31 : 15;
   get_bit_at_offset_test(bytes, offset1, 1);
 
-  //lsb - 2 of 0x23
   const unsigned offset2 = BYTE_SIZE == 2 ? 29 : 13;
   get_bit_at_offset_test(bytes, offset2, 0);
 
-  //most significant 1 in 0x46
   const unsigned offset3 = BYTE_SIZE == 2 ? 41 : 17;
   get_bit_at_offset_test(bytes, offset3, 1);
 
-  //second most significant 1 in 0x46
   const unsigned offset4 = BYTE_SIZE == 2 ? 45 : 21;
   get_bit_at_offset_test(bytes, offset4, 1);
 
-  //least significant bit in 0x46
   const unsigned offset5 = BYTE_SIZE == 2 ? 47 : 23;
   get_bit_at_offset_test(bytes, offset5, 0);
 
@@ -138,7 +133,7 @@ static void set_bit_at_offset_tests(void) {
     unsigned changed_index;
     unsigned mask;
   } Test;
-  const Test tests[] = { // use get_bit_at_offset() tests offsets and data
+  const Test tests[] = {
     { .offset = BYTE_SIZE == 2 ? 31 : 15, .changed_index = 1, .mask = 0x1 },
     { .offset = BYTE_SIZE == 2 ? 29 : 13, .changed_index = 1, .mask = 0x4 },
     { .offset = BYTE_SIZE == 2 ? 41 : 17, .changed_index = 2, .mask = 0x40 },
@@ -226,12 +221,12 @@ static void run_length_tests(void) {
     unsigned run_len;
   } Test;
   Test tests[] = {
-    { .offset = is2 ? 11 : 3, .run_len = 3 },  //init 3 1s in 0x1d 0001_1101
-    { .offset = is2 ? 15 : 7, .run_len = 1 },  //0s from LSB 0x1d to 0x30
-    { .offset = is2 ? 30 : 14, .run_len = 8 }, //1s starting 2nd last to last
-    { .offset = is2 ? 47 : 23, .run_len = 1 }, //last bit
-    { .offset = is2 ? 48 : 24, .run_len = 0 }, //just outside bytes[]
-    { .offset = is2 ? 60 : 80, .run_len = 0 }, //well outside bytes[]
+    { .offset = is2 ? 11 : 3, .run_len = 3 },
+    { .offset = is2 ? 15 : 7, .run_len = 1 },
+    { .offset = is2 ? 30 : 14, .run_len = 8 },
+    { .offset = is2 ? 47 : 23, .run_len = 1 },
+    { .offset = is2 ? 48 : 24, .run_len = 0 },
+    { .offset = is2 ? 60 : 80, .run_len = 0 },
   };
   for (int i = 0; i < sizeof(tests)/sizeof(tests[0]); i++) {
     const Test *t = &tests[i];
@@ -260,7 +255,7 @@ const unsigned nSOS = sizeof(SOS)/sizeof(SOS[0]);
       -   .         -   .
         A                 R
 0xeb              0xa0
- */
+*/
 
 #if BYTE_SIZE == 2
 static Byte SOSBin[] = { 0xa8ee, 0xe2a2, 0xeba0, };
@@ -272,7 +267,7 @@ static unsigned nSOSBin = sizeof(SOSBin)/sizeof(SOSBin[0]);
 
 
 static void text_to_morse_sos_test(void) {
-  Byte bytes[] = { [9] = 0 }; //force all 0's
+  Byte bytes[] = { [9] = 0 };
 
   const int actual = text_to_morse(SOS, nSOS, bytes);
   UTEST_REL("text_to_morse_sos return", nSOSBin, ==, actual);
@@ -287,7 +282,7 @@ static void text_to_morse_sos_test(void) {
 }
 
 static void morse_to_text_sos_test(void) {
-  Byte text[] = { [9] = 0 }; //force all 0's
+  Byte text[] = { [9] = 0 };
 
   const int actual = morse_to_text(SOSBin, nSOSBin, text);
   UTEST_REL("morse_to_text_sos return", nSOS, ==, actual);
@@ -312,17 +307,17 @@ main(void)
 
   is_verbose_unit_test = 1;
 
-  // byte_bit_mask_tests();
-  // get_log2_power_of_2_tests();
-  // get_bit_index_tests();
-  // get_byte_offset_tests();
-  // get_bit_at_offset_tests();
-  // set_bit_at_offset_tests();
-  // set_bits_at_offset_tests();
-  // run_length_tests();
+  byte_bit_mask_tests();
+  get_log2_power_of_2_tests();
+  get_bit_index_tests();
+  get_byte_offset_tests();
+  get_bit_at_offset_tests();
+  set_bit_at_offset_tests();
+  set_bits_at_offset_tests();
+  run_length_tests();
 
-  // text_to_morse_sos_test();
-  // morse_to_text_sos_test();
+  text_to_morse_sos_test();
+  morse_to_text_sos_test();
 
   return n_fails_unit_test;
 }

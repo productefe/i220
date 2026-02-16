@@ -1,8 +1,8 @@
-morse-*
-*~
 *.o
-*.bin
-*.txt
-*.decode
+morse-encode
+morse-decode
 tests8
 tests16
+*~
+*.swp
+.DS_Store
