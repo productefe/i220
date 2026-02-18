@@ -66,16 +66,17 @@ add_line(const Line *last, const Point *pt0, const Point *pt1)
   return line;
 }
 
-
-/** Free all storage occupied by list of lines */
 static void
 free_lines(const Line *lines)
 {
-  for (const Line *p = lines; p != NULL; p = p->succ) {
-    free((void *)p->label);    //free label
-    free((void*)p);            //free Line node
+  const Line *p1 = NULL;
+  for (const Line *p = lines; p != NULL; p = p1) {
+    p1 = p->succ;
+    free((void *)p->label);
+    free((void *)p);
   }
 }
+
 
 static void
 out_lines(FILE *out, const Line *lines)
