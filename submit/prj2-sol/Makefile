@@ -6,7 +6,7 @@ CFLAGS = -g -Wall -I $(COURSE_DIR)/include
 LDFLAGS = -L $(COURSE_DIR)/lib
 LDLIBS = -l $(COURSE)
 
-TARGETS = bcd-0 bcd-1 bcd-2 bcd-3 bcd
+TARGETS = bcd-0 bcd-1 bcd-2 bcd-3 bcd-4 bcd
 
 
 all:		$(TARGETS)

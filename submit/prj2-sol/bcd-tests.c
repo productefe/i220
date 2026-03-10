@@ -165,7 +165,6 @@ initTestData(Data *data)
 static void
 binary_to_bcd_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   for (int i = 0; i < sizeof(TESTS)/sizeof(TESTS[0]); i++) {
     const BcdInfo *t = TESTS[i];
@@ -198,7 +197,6 @@ binary_to_bcd_tests(void)
 static void
 bcd_to_binary_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   for (int i = 0; i < sizeof(TESTS)/sizeof(TESTS[0]); i++) {
     const BcdInfo *t = TESTS[i];
@@ -229,7 +227,6 @@ bcd_to_binary_tests(void)
 static void
 str_to_bcd_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   for (int i = 0; i < sizeof(TESTS)/sizeof(TESTS[0]); i++) {
     const BcdInfo *t = TESTS[i];
@@ -287,7 +284,6 @@ str_to_bcd_tests(void)
 static void
 bcd_to_str_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   for (int i = 0; i < sizeof(TESTS)/sizeof(TESTS[0]); i++) {
     const BcdInfo *t = TESTS[i];
@@ -338,7 +334,6 @@ bcd_to_str_tests(void)
 static void
 bcd_add_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   Bcd sum;
   Bcd expected;
@@ -450,7 +445,6 @@ bcd_add_tests(void)
 static void
 bcd_multiply_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   Bcd prod;
   Bcd expected;
@@ -557,7 +551,6 @@ bcd_multiply_tests(void)
 static void
 bcd_multiop_tests(void)
 {
-  return;  //TODO: remove this line to activate tests
   char name[MAX_TEST_NAME];
   Bcd sum;
   Bcd prod;
