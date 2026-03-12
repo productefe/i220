@@ -1,1 +1,1 @@
-int sym = 99;
+extern int sym;

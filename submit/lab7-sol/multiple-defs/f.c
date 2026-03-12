@@ -1,5 +1,4 @@
-extern double x;
-
+extern int x;
 void f() {
   x = -0.0;
 }

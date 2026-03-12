@@ -12,9 +12,8 @@ TARGETS = hello
 all:		$(TARGETS)	
 
 # link objects into hello executable
-hello:		main.o
-		$(CC) $(LDFLAGS) $^ $(LDLIBS) -o $@
-
+hello:	 main.o greet.o
+	 $(CC) $(LDFLAGS) $^ $(LDLIBS) -o $@
 .PHONY:		clean
 clean:
 		rm -f *.o *~ $(TARGETS)
