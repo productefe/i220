@@ -1,0 +1,8 @@
+testgeom-dynamic.nm:                 U circ_area
+testgeom-dynamic.nm:                 U circ_perimeter
+testgeom-dynamic.nm:                 U rect_area
+testgeom-dynamic.nm:                 U rect_perimeter
+testgeom-static.nm:00000000004018df T circ_area
+testgeom-static.nm:000000000040188c T circ_perimeter
+testgeom-static.nm:00000000004019c6 T rect_area
+testgeom-static.nm:0000000000401933 T rect_perimeter
