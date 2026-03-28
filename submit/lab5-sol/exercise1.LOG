@@ -1,0 +1,670 @@
+Script started on 2026-02-25 10:02:53-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="59"]
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ ls
+[?2004lMakefile  exercise1.LOG  [0m[01;32mhello[0m  hello.c  hello.s  [01;34midentify[0m
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ nano exer[K[K[K[K[K[K[K[K[K[7mscript exercise1.LOG[27mscript exercise1.LOG
+[?2004lScript started, output log file is 'exercise1.LOG'.
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7msize hello[27m
+[7msize -A hello[27m
+
+[7mobjdump -d hello > hello.objdump[27m
+
+[7mobjdump -d -s -x hello > hello.objdump[27m
+
+[7mobjdump -d hello | grep -A40 'main.'[27m
+
+[7mls -l hello[27m
+
+[7mstrip hello[27m
+
+[7mls -l hello[27m
+
+[7mmake clean[27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ size hello
+size -A hello
+
+objdump -d hello > hello.objdump
+
+objdump -d -s -x hello > hello.objdump
+
+objdump -d hello | grep -A40 'main.'
+
+ls -l hello
+
+strip hello
+
+ls -l hello
+
+make clean
+[?2004l   text	   data	    bss	    dec	    hex	filename
+   1732	    592	     48	   2372	    944	hello
+hello  :
+section              size    addr
+.interp                28     792
+.note.gnu.property     32     824
+.note.gnu.build-id     36     856
+.note.ABI-tag          32     892
+.gnu.hash              48     928
+.dynsym               240     976
+.dynstr               163    1216
+.gnu.version           20    1380
+.gnu.version_r         48    1400
+.rela.dyn             240    1448
+.rela.plt              48    1688
+.init                  23    4096
+.plt                   48    4128
+.plt.got                8    4176
+.text                 420    4192
+.fini                   9    4612
+.rodata                33    8192
+.eh_frame_hdr          52    8228
+.eh_frame             204    8280
+.init_array             8   15824
+.fini_array             8   15832
+.dynamic              480   15840
+.got                   40   16320
+.got.plt               40   16360
+.data                  16   16400
+.bss                   48   16416
+.comment               39       0
+.debug_aranges         48       0
+.debug_info           857       0
+.debug_abbrev         359       0
+.debug_line           178       0
+.debug_str            584       0
+.debug_line_str       228       0
+Total                4665
+
+
+    1074:	48 8d 3d 00 01 00 00 	lea    0x100(%rip),%rdi        # 117b <main>
+    107b:	ff 15 3f 2f 00 00    	call   *0x2f3f(%rip)        # 3fc0 <__libc_start_main@GLIBC_2.34>
+    1081:	f4                   	hlt
+    1082:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    1089:	00 00 00 
+    108c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001090 <deregister_tm_clones>:
+    1090:	48 8d 3d 89 2f 00 00 	lea    0x2f89(%rip),%rdi        # 4020 <stdout@GLIBC_2.2.5>
+    1097:	48 8d 05 82 2f 00 00 	lea    0x2f82(%rip),%rax        # 4020 <stdout@GLIBC_2.2.5>
+    109e:	48 39 f8             	cmp    %rdi,%rax
+    10a1:	74 15                	je     10b8 <deregister_tm_clones+0x28>
+    10a3:	48 8b 05 1e 2f 00 00 	mov    0x2f1e(%rip),%rax        # 3fc8 <_ITM_deregisterTMCloneTable@Base>
+    10aa:	48 85 c0             	test   %rax,%rax
+    10ad:	74 09                	je     10b8 <deregister_tm_clones+0x28>
+    10af:	ff e0                	jmp    *%rax
+    10b1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    10b8:	c3                   	ret
+    10b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000010c0 <register_tm_clones>:
+    10c0:	48 8d 3d 59 2f 00 00 	lea    0x2f59(%rip),%rdi        # 4020 <stdout@GLIBC_2.2.5>
+    10c7:	48 8d 35 52 2f 00 00 	lea    0x2f52(%rip),%rsi        # 4020 <stdout@GLIBC_2.2.5>
+    10ce:	48 29 fe             	sub    %rdi,%rsi
+    10d1:	48 89 f0             	mov    %rsi,%rax
+    10d4:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    10d8:	48 c1 f8 03          	sar    $0x3,%rax
+    10dc:	48 01 c6             	add    %rax,%rsi
+    10df:	48 d1 fe             	sar    %rsi
+    10e2:	74 14                	je     10f8 <register_tm_clones+0x38>
+    10e4:	48 8b 05 ed 2e 00 00 	mov    0x2eed(%rip),%rax        # 3fd8 <_ITM_registerTMCloneTable@Base>
+    10eb:	48 85 c0             	test   %rax,%rax
+    10ee:	74 08                	je     10f8 <register_tm_clones+0x38>
+    10f0:	ff e0                	jmp    *%rax
+    10f2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    10f8:	c3                   	ret
+    10f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001100 <__do_global_dtors_aux>:
+    1100:	f3 0f 1e fa          	endbr64
+    1104:	80 3d 3d 2f 00 00 00 	cmpb   $0x0,0x2f3d(%rip)        # 4048 <completed.0>
+    110b:	75 2b                	jne    1138 <__do_global_dtors_aux+0x38>
+--
+000000000000117b <main>:
+    117b:	55                   	push   %rbp
+    117c:	48 89 e5             	mov    %rsp,%rbp
+    117f:	48 83 ec 20          	sub    $0x20,%rsp
+    1183:	89 7d ec             	mov    %edi,-0x14(%rbp)
+    1186:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+    118a:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+    118e:	75 2f                	jne    11bf <main+0x44>
+    1190:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    1194:	48 8b 10             	mov    (%rax),%rdx
+    1197:	48 8b 05 a2 2e 00 00 	mov    0x2ea2(%rip),%rax        # 4040 <stderr@GLIBC_2.2.5>
+    119e:	48 8d 0d 69 0e 00 00 	lea    0xe69(%rip),%rcx        # 200e <_IO_stdin_used+0xe>
+    11a5:	48 89 ce             	mov    %rcx,%rsi
+    11a8:	48 89 c7             	mov    %rax,%rdi
+    11ab:	b8 00 00 00 00       	mov    $0x0,%eax
+    11b0:	e8 7b fe ff ff       	call   1030 <fprintf@plt>
+    11b5:	bf ef be ad de       	mov    $0xdeadbeef,%edi
+    11ba:	e8 81 fe ff ff       	call   1040 <exit@plt>
+    11bf:	c7 45 fc 01 00 00 00 	movl   $0x1,-0x4(%rbp)
+    11c6:	eb 2d                	jmp    11f5 <main+0x7a>
+    11c8:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    11cb:	48 98                	cltq
+    11cd:	48 8d 14 c5 00 00 00 	lea    0x0(,%rax,8),%rdx
+    11d4:	00 
+    11d5:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    11d9:	48 01 d0             	add    %rdx,%rax
+    11dc:	48 8b 10             	mov    (%rax),%rdx
+    11df:	48 8b 05 3a 2e 00 00 	mov    0x2e3a(%rip),%rax        # 4020 <stdout@GLIBC_2.2.5>
+    11e6:	48 89 d6             	mov    %rdx,%rsi
+    11e9:	48 89 c7             	mov    %rax,%rdi
+    11ec:	e8 58 ff ff ff       	call   1149 <hello>
+    11f1:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+    11f5:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    11f8:	3b 45 ec             	cmp    -0x14(%rbp),%eax
+    11fb:	7c cb                	jl     11c8 <main+0x4d>
+    11fd:	b8 00 00 00 00       	mov    $0x0,%eax
+    1202:	c9                   	leave
+    1203:	c3                   	ret
+
+Disassembly of section .fini:
+
+0000000000001204 <_fini>:
+    1204:	48 83 ec 08          	sub    $0x8,%rsp
+    1208:	48 83 c4 08          	add    $0x8,%rsp
+    120c:	c3                   	ret
+-rwxr-x--- 1 esurucu esurucu 18848 Feb 25 10:01 [0m[01;32mhello[0m
+-rwxr-x--- 1 esurucu esurucu 14488 Feb 25  2026 [0m[01;32mhello[0m
+rm -f hello hello.s *.objdump *~
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [?2004l
+exit
+Script done.
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mcd ../identify[27m
+[7mmake[27m
+[7m./identify[27m[A[A]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ cd ../identify
+make
+./identify
+[?2004lbash: cd: ../identify: No such file or directory
+cc -g -Wall  -std=c2x    hello.c   -o hello
+cc -g -Wall  -std=c2x -S hello.c
+bash: ./identify: Is a directory
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mcd identify[27m
+[7mmake[27m
+[7m./identify[27m[A[A]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ cd identify
+make
+./identify
+[?2004lcc -g -Wall -std=c11   -c -o identify.o identify.c
+cc   identify.o mystery.o   -o identify
+1
+mystery = 1 (0x1)
+3
+mystery = 3 (0x3)
+ff
+mystery = 255 (0xff)
+7
+mystery = 7 (0x7)
+ffff
+mystery = 65535 (0xffff)
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ [7mobjdump -d mystery.o > mystery.objdump[27mobjdump -d mystery.o > mystery.objdump
+[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ nano[K[K[K[Kls
+[?2004lMakefile  [0m[01;32midentify[0m  identify.c  identify.o  mystery.c.TODO  mystery.h  mystery.o  mystery.objdump
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ nano [7mmystery.objdump[27mmystery.objdump
+[?2004l[?2004h[?1049h[22;0;0t[1;59r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[57;89H(B[0;7m[ Reading... ](B[m[57;87H(B[0;7m[ Read 14 lines ](B[m[H(B[0;7m  GNU nano 7.2 [75bmystery.objdump [83b [1;189H(B[m[58d(B[0;7m^G(B[m Help[58;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[58;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[58;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[59d(B[0;7m^X(B[m Exit[59;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[59;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[59;120H(B[0;7mM-6(B[m Copy[59;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[59;171H(B[0;7m^F(B[m Forward[3dmystery.o:     file format elf64-x86-64[6dDisassembly of section .text:[8d0[15b <mystery>:[9;4H0:[38;5;208m   [39m(B[m55[41m[19X[9;30H[49m[38;5;208m   [39m(B[mpush   %rbp[10;4H1:[38;5;208m   [39m(B[m48 89 e5[41m [12b[49m[38;5;208m   [39m(B[mmov    %rsp,%rbp[11;4H4:[38;5;208m   [39m(B[m89 7d fc[41m [12b[49m[38;5;208m   [39m(B[mmov    %edi,-0x4(%rbp)[12;4H7:[38;5;208m   [39m(B[m8b 45 fc[41m [12b[49m[38;5;208m   [39m(B[mmov    -0x4(%rbp),%eax[13;4Ha:[38;5;208m   [39m(B[m25 ff ff 7f 00[41m [6b[49m[38;5;208m   [39m(B[mand    $0x7fffff,%eax[14;4Hf:[38;5;208m   [39m(B[mc9[41m[19X[14;30H[49m[38;5;208m   [39m(B[mleave[15;3H10:[38;5;208m   [39m(B[mc3[41m[19X[15;30H[49m[38;5;208m   [39m(B[mret[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[57d[K[?12l[?25h[16d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A  1[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[ADis[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[Amys[?25l[?12l[?25h[A[?25l[?12l[?25h[3;4H[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[58d[J[59d[?12l[?25h[59;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ [7mmv mystery.c.TODO mystery.c[27mmv mystery.c.TODO mystery.c
+[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ nano mystery.c
+[?2004l[?2004h[?1049h[22;0;0t[1;59r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[57;89H(B[0;7m[ Reading... ](B[m[57;88H(B[0;7m[ Read 9 lines ](B[m[H(B[0;7m  GNU nano 7.2 [78bmystery.c [86b [1;189H(B[m[58d(B[0;7m^G(B[m Help[58;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[58;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[58;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[59d(B[0;7m^X(B[m Exit[59;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[59;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[59;120H(B[0;7mM-6(B[m Copy[59;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[59;171H(B[0;7m^F(B[m Forward[2d(B[0;1m[36m#include[39m(B[m (B[0;1m[33m"mystery.h"[4d[34m/** Return v with value masked off to n-bits for some fixed n. */[5d(B[0m[32munsigned[39m(B[m [32mint[6d[39m(B[mmystery([32munsigned[39m(B[m [32mint[39m(B[m v)[7d{[8d [32menum[39m(B[m { (B[0;1m[31mMASK[39m(B[m = 0x0 }; (B[0;1m[34m//[37m[43mTODO[9;3H(B[0m[35mreturn[39m(B[m v & (B[0;1m[31mMASK[39m(B[m;[10d}[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h{[?25l[?12l[?25h[8d[?25l[57d[K[?12l[?25h[8d [?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h{[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h =[?25l[?12l[?25h [?25l[?12l[?25h0[?25l[?12l[?25hx[?25l[?12l[?25h0[?25l[1;104H(B[0;7m*[189G(B[m[?12l[?25h[8;19H[1P[?25l[?12l[?25h7 }; (B[0;1m[34m//[37m[43mTODO[8;20H[39;49m(B[m[?25l[?12l[?25hF }; (B[0;1m[34m//[37m[43mTODO[8;21H[39;49m(B[m[?25l[?12l[?25hFF }; (B[0;1m[34m//[37m[43mTODO[8;22H[39;49m(B[m[?25l[?12l[?25hFFF }; (B[0;1m[34m//[37m[43mTODO[8;23H[39;49m(B[m[?25l[?12l[?25hFFFF }; (B[0;1m[34m//[37m[43mTODO[8;24H[39;49m(B[m[?25l[?12l[?25hFFFFF }; (B[0;1m[34m//[37m[43mTODO[8;25H[39;49m(B[m[?25l[?12l[?25h[9;19H[?25l[?12l[?25h[8;25H[?25l[?12l[?25h [?25l[?12l[?25h}[?25l[?12l[?25h;[?25l[?12l[?25h [?25l[?12l[?25h[31G[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h(B[0;1m[34mTOD[39m(B[m[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h/[K[?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [?25l[57d(B[0;7mSave modified buffer? [167b [58;1H Y(B[m Yes[K[59d(B[0;7m N(B[m No  [59;17H(B[0;7m^C(B[m Cancel[K[57;23H[?12l[?25h[?25l[58d(B[0;7m^G(B[m Help[58;48H(B[0;7mM-D(B[m DOS Format[58;95H(B[0;7mM-A(B[m Append[58;142H(B[0;7mM-B(B[m Backup File[59d(B[0;7m^C(B[m Cancel[17G [8b[59;48H(B[0;7mM-M(B[m Mac Format[59;95H(B[0;7mM-P(B[m Prepend[59;142H(B[0;7m^T(B[m Browse[57d(B[0;7mFile Name to Write: mystery.c(B[m[?12l[?25h[?25l[57;88H[1K (B[0;7m[ Writing... ](B[m[K[1;104H(B[0;7m [189G(B[m[57;87H(B[0;7m[ Wrote 9 lines ](B[m[J[59d[?12l[?25h[59;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ [7mmake[27m
+[7m./identify[27m[A]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ make
+./identify
+[?2004lcc -g -Wall -std=c11   -c -o mystery.o mystery.c
+cc   identify.o mystery.o   -o identify
+fffff
+mystery = 1048575 (0xfffff)
+800000
+mystery = 0 (0x0)
+80000
+mystery = 524288 (0x80000)
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ [7mcd ..[27m
+[7mmake[27m
+[7mgdb hello[27m[A[A]0;esurucu@remote02: ~/i220/submit/lab5-sol/identify[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol/identify[00m$ cd ..
+make
+gdb hello
+[?2004lmake: Nothing to be done for 'all'.
+[35;1mGNU gdb (Debian 13.1-3) 13.1[m
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mhello[m...
+[?2004h(gdb) [7mstart[27mstart
+[?2004l+start
+Temporary breakpoint 1 at [34m0x118a[m: file [32mhello.c[m, line 16.
+Starting program: [32m/import/home/esurucu/i220/submit/lab5-sol/hello[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Temporary breakpoint 1, [33mmain[m ([36margc[m=1, [36margv[m=0x7fffffffdf68) at [32mhello.c[m:16
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+[?2004h[?2004l[?2004h(gdb) [7mdisas /s[27m[C[C[C[C[C[Cdisas /s
+[?2004l+disas /s
+Dump of assembler code for function [33mmain[m:
+hello.c:
+15	[31m{[m
+   [34m0x000055555555517b[m <+0>:	[32mpush   [m[31m%rbp[m
+   [34m0x000055555555517c[m <+1>:	[32mmov    [m[31m%rsp[m,[31m%rbp[m
+   [34m0x000055555555517f[m <+4>:	[32msub    [m[34m$[m[34m0x20[m,[31m%rsp[m
+   [34m0x0000555555555183[m <+8>:	[32mmov    [m[31m%edi[m,[34m-[m[34m0x14[m([31m%rbp[m)
+   [34m0x0000555555555186[m <+11>:	[32mmov    [m[31m%rsi[m,[34m-[m[34m0x20[m([31m%rbp[m)
+
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+=> [34m0x000055555555518a[m <+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+   [34m0x000055555555518e[m <+19>:	[32mjne    [m[34m0x5555555551bf[m <[33mmain[m+68>
+
+17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+   [34m0x0000555555555190[m <+21>:	[32mmov    [m[34m-[m[34m0x20[m([31m%rbp[m),[31m%rax[m
+   [34m0x0000555555555194[m <+25>:	[32mmov    [m([31m%rax[m),[31m%rdx[m
+   [34m0x0000555555555197[m <+28>:	[32mmov    [m[34m0x2ea2[m([31m%rip[m),[31m%rax[m[37;2m        # [m[37;2m0x555555558040 <stderr@GLIBC_2.2.5>[m
+   [34m0x000055555555519e[m <+35>:	[32mlea    [m[34m0xe69[m([31m%rip[m),[31m%rcx[m[37;2m        # [m[37;2m0x55555555600e[m
+   [34m0x00005555555551a5[m <+42>:	[32mmov    [m[31m%rcx[m,[31m%rsi[m
+   [34m0x00005555555551a8[m <+45>:	[32mmov    [m[31m%rax[m,[31m%rdi[m
+   [34m0x00005555555551ab[m <+48>:	[32mmov    [m[34m$[m[34m0x0[m,[31m%eax[m
+   [34m0x00005555555551b0[m <+53>:	[32mcall   [m[34m0x555555555030[m <[33mfprintf@plt[m>
+
+18	    [01mexit[m[31m([m[35m0xdeadbeef[m[31m);[m
+   [34m0x00005555555551b5[m <+58>:	[32mmov    [m[34m$[m[34m0xdeadbeef[m,[31m%edi[m
+   [34m0x00005555555551ba[m <+63>:	[32mcall   [m[34m0x555555555040[m <[33mexit@plt[m>
+
+19	  [31m}[m
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+   [34m0x00005555555551bf[m <+68>:	[32mmovl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x4[m([31m%rbp[m)
+   [34m0x00005555555551c6[m <+75>:	[32mjmp    [m[34m0x5555555551f5[m <[33mmain[m+122>
+
+21	    [01mhello[m[31m([mstdout[31m,[m argv[31m[[mi[31m]);[m
+   [34m0x00005555555551c8[m <+77>:	[32mmov    [m[34m-[m[34m0x4[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551cb[m <+80>:	[32mcltq[m
+   [34m0x00005555555551cd[m <+82>:	[32mlea    [m[34m0x0[m(,[31m%rax[m,[34m8[m),[31m%rdx[m
+   [34m0x00005555555551d5[m <+90>:	[32mmov    [m[34m-[m[34m0x20[m([31m%rbp[m),[31m%rax[m
+   [34m0x00005555555551d9[m <+94>:	[32madd    [m[31m%rdx[m,[31m%rax[m
+   [34m0x00005555555551dc[m <+97>:	[32mmov    [m([31m%rax[m),[31m%rdx[m
+   [34m0x00005555555551df[m <+100>:	[32mmov    [m[34m0x2e3a[m([31m%rip[m),[31m%rax[m[37;2m        # [m[37;2m0x555555558020 <stdout@GLIBC_2.2.5>[m
+   [34m0x00005555555551e6[m <+107>:	[32mmov    [m[31m%rdx[m,[31m%rsi[m
+   [34m0x00005555555551e9[m <+110>:	[32mmov    [m[31m%rax[m,[31m%rdi[m
+   [34m0x00005555555551ec[m <+113>:	[32mcall   [m[34m0x555555555149[m <[33mhello[m>
+
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+   [34m0x00005555555551f1[m <+118>:	[32maddl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x4[m([31m%rbp[m)
+   [34m0x00005555555551f5[m <+122>:	[32mmov    [m[34m-[m[34m0x4[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551f8[m <+125>:	[32mcmp    [m[34m-[m[34m0x14[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551fb[m <+128>:	[32mjl     [m[34m0x5555555551c8[m <[33mmain[m+77>
+
+22	  [31m}[m
+23	  [01;34mreturn[m [35m0[m[31m;[m
+   [34m0x00005555555551fd[m <+130>:	[32mmov    [m[34m$[m[34m0x0[m,[31m%eax[m
+
+24	[31m}[m
+   [34m0x0000555555555202[m <+135>:	[32mleave[m
+   [34m0x0000555555555203[m <+136>:	[32mret[m
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--[7mi reg[27m[1Pi re[K[K[K[Kq
+[?2004lQuit
+[?2004h(gdb) [7mi reg[27mi reg
+[?2004l+i reg
+rax            0x55555555517b      93824992235899
+rbx            0x7fffffffdf68      140737488346984
+rcx            0x555555557dd8      93824992247256
+rdx            0x7fffffffdf78      140737488347000
+rsi            0x7fffffffdf68      140737488346984
+rdi            0x1                 1
+rbp            0x7fffffffde50      0x7fffffffde50
+rsp            0x7fffffffde30      0x7fffffffde30
+r8             0x0                 0
+r9             0x7ffff7fce680      140737353934464
+r10            0x7ffff7fca878      140737353918584
+r11            0x7ffff7fe0a10      140737354009104
+r12            0x0                 0
+r13            0x7fffffffdf78      140737488347000
+r14            0x555555557dd8      93824992247256
+r15            0x7ffff7ffd020      140737354125344
+rip            0x55555555518a      0x55555555518a <main+15>
+eflags         0x206               [ PF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+k0             0x0                 0
+k1             0x0                 0
+k2             0x0                 0
+k3             0x0                 0
+k4             0x0                 0
+k5             0x0                 0
+k6             0x0                 0
+k7             0x0                 0
+[?2004h(gdb) [7mp argc[27mp argc
+[?2004l+p argc
+$1 = 1
+[?2004h(gdb) [7mp *(int *)($rbp - 20)[27m[C[C[C[C[C[Cp *(int *)($rbp - 20)
+[?2004l+p *(int *)($rbp - 20)
+$2 = 1
+[?2004h(gdb) [7mp argv[27mp argv
+[?2004l+p argv
+$3 = (const char **[36m[m) [34m0x7fffffffdf68[m
+[?2004h(gdb) [7mp *(const char ***)($rbp - 32)[27m[C[C[C[C[C[Cp *(const char ***)($rbp - 32)
+[?2004l+p *(const char ***)($rbp - 32)
+$4 = (const char **[36m[m) [34m0x7fffffffdf68[m
+[?2004h(gdb) [7mp (*(const char ***)($rbp - 0x20))[0][27m[C[C[C[C[C[Cp (*(const char ***)($rbp - 0x20))[0]
+[?2004l+p (*(const char ***)($rbp - 0x20))[0]
+$5 = [34m0x7fffffffe20e[m "/import/home/esurucu/i220/submit/lab5-sol/hello"
+[?2004h(gdb) [7mdisplay /i *$pc[27m[C[C[C[C[C[Cdisplay /i *$pc
+[?2004l+display /i *$pc
+1: x/i *$pc
+=> [34m0x55555555518a[m <[33mmain[m+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+[?2004h(gdb) [7mp $eflags[27m[C[C[C[C[C[Cp $eflags
+[?2004l+p $eflags
+$6 = [ [36mPF[m [36mIF[m ]
+[?2004h(gdb) [7mni[27mni
+[?2004l+ni
+[34m0x000055555555518e[m	16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+1: x/i *$pc
+=> [34m0x55555555518e[m <[33mmain[m+19>:	[32mjne    [m[34m0x5555555551bf[m <[33mmain[m+68>
+[?2004h[?2004l[?2004h(gdb) [7mp $eflags[27m[C[C[C[C[C[Cp $eflags
+[?2004l+p $eflags
+$7 = [ [36mPF[m [36mZF[m [36mIF[m ]
+[?2004h(gdb) [7mni[27mni
+[?2004l+ni
+17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x555555555190[m <[33mmain[m+21>:	[32mmov    [m[34m-[m[34m0x20[m([31m%rbp[m),[31m%rax[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x0000555555555194[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x555555555194[m <[33mmain[m+25>:	[32mmov    [m([31m%rax[m),[31m%rdx[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x0000555555555197[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x555555555197[m <[33mmain[m+28>:	[32mmov    [m[34m0x2ea2[m([31m%rip[m),[31m%rax[m[37;2m        # [m[37;2m0x555555558040 <stderr@GLIBC_2.2.5>[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x000055555555519e[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x55555555519e[m <[33mmain[m+35>:	[32mlea    [m[34m0xe69[m([31m%rip[m),[31m%rcx[m[37;2m        # [m[37;2m0x55555555600e[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x00005555555551a5[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x5555555551a5[m <[33mmain[m+42>:	[32mmov    [m[31m%rcx[m,[31m%rsi[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x00005555555551a8[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x5555555551a8[m <[33mmain[m+45>:	[32mmov    [m[31m%rax[m,[31m%rdi[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x00005555555551ab[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x5555555551ab[m <[33mmain[m+48>:	[32mmov    [m[34m$[m[34m0x0[m,[31m%eax[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x00005555555551b0[m	17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+1: x/i *$pc
+=> [34m0x5555555551b0[m <[33mmain[m+53>:	[32mcall   [m[34m0x555555555030[m <[33mfprintf@plt[m>
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+usage: /import/home/esurucu/i220/submit/lab5-sol/hello NAME...
+18	    [01mexit[m[31m([m[35m0xdeadbeef[m[31m);[m
+1: x/i *$pc
+=> [34m0x5555555551b5[m <[33mmain[m+58>:	[32mmov    [m[34m$[m[34m0xdeadbeef[m,[31m%edi[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[34m0x00005555555551ba[m	18	    [01mexit[m[31m([m[35m0xdeadbeef[m[31m);[m
+1: x/i *$pc
+=> [34m0x5555555551ba[m <[33mmain[m+63>:	[32mcall   [m[34m0x555555555040[m <[33mexit@plt[m>
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l+ni
+[Inferior 1 (process 60439) exited with code 0357]
+[?2004h[?2004l[?2004h(gdb) [7mstart joe[27m
+[7mb hello[27m
+[7mc[27m[A[A[C[C[C[C[Cstart joe
+b hello
+c
+[?2004l+start joe
+b hello
+c
+Temporary breakpoint 2 at [34m0x55555555518a[m: file [32mhello.c[m, line 16.
+Starting program: [32m/import/home/esurucu/i220/submit/lab5-sol/hello[m joe
+b hello
+c
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Temporary breakpoint 2, [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:16
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+1: x/i *$pc
+=> [34m0x55555555518a[m <[33mmain[m+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l[?2004h(gdb) 
+[?2004l[?2004h(gdb) c
+[?2004l+c
+Continuing.
+hello joe
+[Inferior 1 (process 62774) exited normally]
+[?2004h[?2004l[?2004h(gdb) [7mstart joe[27m[C[C[C[C[C[Cstart joe
+[?2004l+start joe
+Temporary breakpoint 3 at [34m0x55555555518a[m: file [32mhello.c[m, line 16.
+Starting program: [32m/import/home/esurucu/i220/submit/lab5-sol/hello[m joe
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Temporary breakpoint 3, [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:16
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+1: x/i *$pc
+=> [34m0x55555555518a[m <[33mmain[m+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+[?2004h[?2004l[?2004h(gdb) [7mb hello[27mb hello
+[?2004l+b hello
+Breakpoint 4 at [34m0x555555555159[m: file [32mhello.c[m, line 8.
+[?2004h(gdb) [7mc[27mc
+[?2004l+c
+Continuing.
+
+Breakpoint 4, [33mhello[m ([36mout[m=0x7ffff7f8c760 <_IO_2_1_stdout_>, [36mwho[m=0x7fffffffe23a "joe") at [32mhello.c[m:8
+8	  [01mfprintf[m[31m([mout[31m,[m [31m"hello %s[m[35m\n[m[31m"[m[31m,[m who[31m);[m
+1: x/i *$pc
+=> [34m0x555555555159[m <[33mhello[m+16>:	[32mmov    [m[34m-[m[34m0x10[m([31m%rbp[m),[31m%rdx[m
+[?2004h[?2004l[?2004h(gdb) [7mx/s $rsi[27m[C[C[C[C[C[Cx/s $rsi
+[?2004l+x/s $rsi
+[34m0x7fffffffe23a[m:	"joe"
+[?2004h(gdb) c
+[?2004l+c
+Continuing.
+hello joe
+[Inferior 1 (process 63219) exited normally]
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l+q
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mmv gdb.txt exercise3.LOG[27mmv gdb.txt exercise3.LOG
+[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ ls
+[?2004lMakefile  exercise1.LOG  exercise3.LOG  [0m[01;32mhello[0m  hello.c  hello.s  [01;34midentify[0m
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mgdb hello[27mgdb hello
+[?2004l[35;1mGNU gdb (Debian 13.1-3) 13.1[m
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mhello[m...
+[?2004h(gdb) [7mstart joe[27m[C[C[C[C[C[Cstart joe
+[?2004l+start joe
+Temporary breakpoint 1 at [34m0x118a[m: file [32mhello.c[m, line 16.
+Starting program: [32m/import/home/esurucu/i220/submit/lab5-sol/hello[m joe
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Temporary breakpoint 1, [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:16
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+[?2004h[?2004l[?2004h(gdb) [7mdisas /s[27m[C[C[C[C[C[Cdisas /s
+[?2004l+disas /s
+Dump of assembler code for function [33mmain[m:
+hello.c:
+15	[31m{[m
+   [34m0x000055555555517b[m <+0>:	[32mpush   [m[31m%rbp[m
+   [34m0x000055555555517c[m <+1>:	[32mmov    [m[31m%rsp[m,[31m%rbp[m
+   [34m0x000055555555517f[m <+4>:	[32msub    [m[34m$[m[34m0x20[m,[31m%rsp[m
+   [34m0x0000555555555183[m <+8>:	[32mmov    [m[31m%edi[m,[34m-[m[34m0x14[m([31m%rbp[m)
+   [34m0x0000555555555186[m <+11>:	[32mmov    [m[31m%rsi[m,[34m-[m[34m0x20[m([31m%rbp[m)
+
+16	  [01;34mif[m [31m([margc [31m==[m [35m1[m[31m)[m [31m{[m
+=> [34m0x000055555555518a[m <+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+   [34m0x000055555555518e[m <+19>:	[32mjne    [m[34m0x5555555551bf[m <[33mmain[m+68>
+
+17	    [01mfprintf[m[31m([mstderr[31m,[m [31m"usage: %s NAME...[m[35m\n[m[31m"[m[31m,[m argv[31m[[m[35m0[m[31m]);[m
+   [34m0x0000555555555190[m <+21>:	[32mmov    [m[34m-[m[34m0x20[m([31m%rbp[m),[31m%rax[m
+   [34m0x0000555555555194[m <+25>:	[32mmov    [m([31m%rax[m),[31m%rdx[m
+   [34m0x0000555555555197[m <+28>:	[32mmov    [m[34m0x2ea2[m([31m%rip[m),[31m%rax[m[37;2m        # [m[37;2m0x555555558040 <stderr@GLIBC_2.2.5>[m
+   [34m0x000055555555519e[m <+35>:	[32mlea    [m[34m0xe69[m([31m%rip[m),[31m%rcx[m[37;2m        # [m[37;2m0x55555555600e[m
+   [34m0x00005555555551a5[m <+42>:	[32mmov    [m[31m%rcx[m,[31m%rsi[m
+   [34m0x00005555555551a8[m <+45>:	[32mmov    [m[31m%rax[m,[31m%rdi[m
+   [34m0x00005555555551ab[m <+48>:	[32mmov    [m[34m$[m[34m0x0[m,[31m%eax[m
+   [34m0x00005555555551b0[m <+53>:	[32mcall   [m[34m0x555555555030[m <[33mfprintf@plt[m>
+
+18	    [01mexit[m[31m([m[35m0xdeadbeef[m[31m);[m
+   [34m0x00005555555551b5[m <+58>:	[32mmov    [m[34m$[m[34m0xdeadbeef[m,[31m%edi[m
+   [34m0x00005555555551ba[m <+63>:	[32mcall   [m[34m0x555555555040[m <[33mexit@plt[m>
+
+19	  [31m}[m
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+   [34m0x00005555555551bf[m <+68>:	[32mmovl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x4[m([31m%rbp[m)
+   [34m0x00005555555551c6[m <+75>:	[32mjmp    [m[34m0x5555555551f5[m <[33mmain[m+122>
+
+21	    [01mhello[m[31m([mstdout[31m,[m argv[31m[[mi[31m]);[m
+   [34m0x00005555555551c8[m <+77>:	[32mmov    [m[34m-[m[34m0x4[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551cb[m <+80>:	[32mcltq[m
+   [34m0x00005555555551cd[m <+82>:	[32mlea    [m[34m0x0[m(,[31m%rax[m,[34m8[m),[31m%rdx[m
+   [34m0x00005555555551d5[m <+90>:	[32mmov    [m[34m-[m[34m0x20[m([31m%rbp[m),[31m%rax[m
+   [34m0x00005555555551d9[m <+94>:	[32madd    [m[31m%rdx[m,[31m%rax[m
+   [34m0x00005555555551dc[m <+97>:	[32mmov    [m([31m%rax[m),[31m%rdx[m
+   [34m0x00005555555551df[m <+100>:	[32mmov    [m[34m0x2e3a[m([31m%rip[m),[31m%rax[m[37;2m        # [m[37;2m0x555555558020 <stdout@GLIBC_2.2.5>[m
+   [34m0x00005555555551e6[m <+107>:	[32mmov    [m[31m%rdx[m,[31m%rsi[m
+   [34m0x00005555555551e9[m <+110>:	[32mmov    [m[31m%rax[m,[31m%rdi[m
+   [34m0x00005555555551ec[m <+113>:	[32mcall   [m[34m0x555555555149[m <[33mhello[m>
+
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+   [34m0x00005555555551f1[m <+118>:	[32maddl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x4[m([31m%rbp[m)
+   [34m0x00005555555551f5[m <+122>:	[32mmov    [m[34m-[m[34m0x4[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551f8[m <+125>:	[32mcmp    [m[34m-[m[34m0x14[m([31m%rbp[m),[31m%eax[m
+   [34m0x00005555555551fb[m <+128>:	[32mjl     [m[34m0x5555555551c8[m <[33mmain[m+77>
+
+22	  [31m}[m
+23	  [01;34mreturn[m [35m0[m[31m;[m
+   [34m0x00005555555551fd[m <+130>:	[32mmov    [m[34m$[m[34m0x0[m,[31m%eax[m
+
+24	[31m}[m
+   [34m0x0000555555555202[m <+135>:	[32mleave[m
+   [34m0x0000555555555203[m <+136>:	[32mret[m
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--q
+[?2004lQuit
+[?2004h(gdb) [7mb *0x00005555555551f8[27m[C[C[C[C[C[Cb *0x00005555555551f8
+[?2004l+b *0x00005555555551f8
+Breakpoint 2 at [34m0x5555555551f8[m: file [32mhello.c[m, line 20.
+[?2004h(gdb) [7mdisplay /i $pc[27m[C[C[C[C[C[Cdisplay /i $pc
+[?2004l+display /i $pc
+1: x/i $pc
+=> [34m0x55555555518a[m <[33mmain[m+15>:	[32mcmpl   [m[34m$[m[34m0x1[m,[34m-[m[34m0x14[m([31m%rbp[m)
+[?2004h(gdb) [7mc[27mc
+[?2004l+c
+Continuing.
+
+Breakpoint 2, [34m0x00005555555551f8[m in [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:20
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+1: x/i $pc
+=> [34m0x5555555551f8[m <[33mmain[m+125>:	[32mcmp    [m[34m-[m[34m0x14[m([31m%rbp[m),[31m%eax[m
+[?2004h[?2004l[?2004h(gdb) [7mp i[27mp i
+[?2004l+p i
+$1 = 1
+[?2004h(gdb) [7mc[27m
+[7mp i[27m[A[C[C[Cc
+p i
+[?2004l+c
+p i
+No symbol "p" in current context.
+[?2004h(gdb) c
+[?2004l+c
+Continuing.
+hello joe
+
+Breakpoint 2, [34m0x00005555555551f8[m in [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:20
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+1: x/i $pc
+=> [34m0x5555555551f8[m <[33mmain[m+125>:	[32mcmp    [m[34m-[m[34m0x14[m([31m%rbp[m),[31m%eax[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l+p i
+$2 = 2
+[?2004h(gdb) [7mset $eax = $eax-1[27m[C[C[C[C[C[Cset $eax = $eax-1
+[?2004l+set $eax = $eax-1
+[?2004h(gdb) [7mc[27mc
+[?2004l+c
+Continuing.
+hello (null)
+
+Breakpoint 2, [34m0x00005555555551f8[m in [33mmain[m ([36margc[m=2, [36margv[m=0x7fffffffdf58) at [32mhello.c[m:20
+20	  [01;34mfor[m [31m([m[32mint[m i [31m=[m [35m1[m[31m;[m i [31m<[m argc[31m;[m i[31m++)[m [31m{[m
+1: x/i $pc
+=> [34m0x5555555551f8[m <[33mmain[m+125>:	[32mcmp    [m[34m-[m[34m0x14[m([31m%rbp[m),[31m%eax[m
+[?2004h[?2004l[?2004h(gdb) c
+[?2004l+c
+Continuing.
+[Inferior 1 (process 63930) exited normally]
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l+q
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mmv gdb.txt exercise4.LOG[27m
+[7mls -l exercise4.LOG[27m[A]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ mv gdb.txt exercise4.LOG
+ls -l exercise4.LOG
+[?2004l-rw-r----- 1 esurucu esurucu 3534 Feb 25 10:42 exercise4.LOG
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mcp ../README.md.tmpl README.md[27mcp ../README.md.tmpl README.md
+[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mnano README.md[27mnano README.md
+[?2004l[?2004h[?1049h[22;0;0t[1;59r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[57;89H(B[0;7m[ Reading... ](B[m[57;88H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 7.2 [78bREADME.md [86b [1;189H(B[m[58d(B[0;7m^G(B[m Help[58;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[58;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[58;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[59d(B[0;7m^X(B[m Exit[59;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[59;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[59;120H(B[0;7mM-6(B[m Copy[59;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[59;171H(B[0;7m^F(B[m Forward[2d(B[0;1m[33m#  Assignment Heading[4d[32m**[36m`Name:    `[32m**[39m(B[m Efe Surucu [36m<br>[5d(B[0;1m[32m**[36m`B-Number:`[32m**[39m(B[m B01171812  [36m<br>[6d(B[0;1m[32m**[36m`BU-Email:`[32m**[39m(B[m esurucu@binghamton.edu  [36m<br>[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[4d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[57d[K[?12l[?25h[2;7H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;104H(B[0;7m*[189G(B[m[?12l[?25h[2;21H [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h(B[0;1m[33ms[39m(B[m[?25l[?12l[?25h(B[0;1m[33me[39m(B[m[?25l[?12l[?25h(B[0;1m[33mm[39m(B[m[?25l[?12l[?25h(B[0;1m[33mb[39m(B[m[?25l[?12l[?25h(B[0;1m[33ml[39m(B[m[?25l[?12l[?25h(B[0;1m[33my[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mc[39m(B[m[?25l[?12l[?25h(B[0;1m[33mo[39m(B[m[?25l[?12l[?25h(B[0;1m[33md[39m(B[m[?25l[?12l[?25h(B[0;1m[33me[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33ma[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms[39m(B[m[?25l[?12l[?25h(B[0;1m[33ms[39m(B[m[?25l[?12l[?25h(B[0;1m[33mi[39m(B[m[?25l[?12l[?25h(B[0;1m[33mg[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn[39m(B[m[?25l[?12l[?25h(B[0;1m[33mm[39m(B[m[?25l[?12l[?25h(B[0;1m[33me[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn[39m(B[m[?25l[?12l[?25h(B[0;1m[33mt[39m(B[m[?25l[?12l[?25h(B[0;1m[33m,[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33mL[39m(B[m[?25l[?12l[?25h(B[0;1m[33ma[39m(B[m[?25l[?12l[?25h(B[0;1m[33mb[39m(B[m[?25l[?12l[?25h(B[0;1m[33m [39m(B[m[?25l[?12l[?25h(B[0;1m[33m5[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[C[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[33mL, Lab 5[14G[39m(B[m[?25l[?12l[?25h(B[0;1m[33ma, Lab 5[15G[39m(B[m[?25l[?12l[?25h(B[0;1m[33mn, Lab 5[16G[39m(B[m[?25l[?12l[?25h(B[0;1m[33mg, Lab 5[17G[39m(B[m[?25l[?12l[?25h(B[0;1m[33mu, Lab 5[18G[39m(B[m[?25l[?12l[?25h(B[0;1m[33ma, Lab 5[19G[39m(B[m[?25l[?12l[?25h(B[0;1m[33mg, Lab 5[20G[39m(B[m[?25l[?12l[?25h(B[0;1m[33me, Lab 5[21G[39m(B[m[?25l[57d(B[0;7mSave modified buffer? [167b [58;1H Y(B[m Yes[K[59d(B[0;7m N(B[m No  [59;17H(B[0;7m^C(B[m Cancel[K[57;23H[?12l[?25h[?25l[58d(B[0;7m^G(B[m Help[58;48H(B[0;7mM-D(B[m DOS Format[58;95H(B[0;7mM-A(B[m Append[58;142H(B[0;7mM-B(B[m Backup File[59d(B[0;7m^C(B[m Cancel[17G [8b[59;48H(B[0;7mM-M(B[m Mac Format[59;95H(B[0;7mM-P(B[m Prepend[59;142H(B[0;7m^T(B[m Browse[57d(B[0;7mFile Name to Write: README.md(B[m[?12l[?25h[?25l[57;88H[1K (B[0;7m[ Writing... ](B[m[K[1;104H(B[0;7m [189G(B[m[57;87H(B[0;7m[ Wrote 5 lines ](B[m[J[59d[?12l[?25h[59;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mgit status -s[27mgit status -s
+[?2004l [31mD[m identify/mystery.c.TODO
+[31m??[m ../lab4-sol.zip
+[31m??[m README.md
+[31m??[m exercise1.LOG
+[31m??[m exercise3.LOG
+[31m??[m exercise4.LOG
+[31m??[m hello.s
+[31m??[m identify/mystery.c
+[31m??[m ../prj1-sol.zip
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ [7mgit add README.md[27m
+[7mgit commit -m "updated README"[27m
+[7mgit push[27m[A[A]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ git add README.md
+git commit -m "updated README"
+git push
+[?2004l[main 4c5ffd4] updated README
+ Committer: esurucu <esurucu@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+ create mode 100644 submit/lab5-sol/README.md
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 503 bytes | 100.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To github.com:productefe/i220.git
+   15e3c80..4c5ffd4  main -> main
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab5-sol[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab5-sol[00m$ git pushcommit -m "updated README"[13Padd README.mdcommit -m "updated README"push[K[K[7mgit s
