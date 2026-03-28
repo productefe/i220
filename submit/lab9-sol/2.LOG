@@ -182,4 +182,58 @@ To github.com:productefe/i220.git
 [?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol[00m$ [7mcd ~/i220/submit/lab9-sol/ulp[27m
 [7mnano indistinguishable.c[27m[A]0;esurucu@remote06: ~/i220/submit/lab9-sol[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol[00m$ cd ~/i220/submit/lab9-sol/ulp
 nano indistinguishable.c
-[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;89H(B[0;7m[ Reading... ](B[m[54;87H(B[0;7m[ Read 22 lines ](B[m[H(B[0;7m  GNU nano 7.2 [73bindistinguishable.c [81b [1;189H(B[m[55d(B[0;7m^G(B[m Help[55;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[55;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[55;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[56d
+[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;89H(B[0;7m[ Reading... ](B[m[54;87H(B[0;7m[ Read 22 lines ](B[m[H(B[0;7m  GNU nano 7.2 [73bindistinguishable.c [81b [1;189H(B[m[55d(B[0;7m^G(B[m Help[55;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[55;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[55;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[56d(B[0;7m^X(B[m Exit[56;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[56;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[56;120H(B[0;7mM-6(B[m Copy[56;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[56;171H(B[0;7m^F(B[m Forward[2d(B[0;1m[36m#include[33m <stdio.h>[4d[36m#define[39m(B[m (B[0;1m[37m[43mTODO[39;49m(B[m 0[6d[32mint[39m(B[m main()[7d{[8d [32mconst[39m(B[m [32mdouble[39m(B[m diff = 500.0;[10;3H[32mconst[39m(B[m [32munsigned[39m(B[m d_shift = (B[0;1m[37m[43mTODO[39;49m(B[m;[11;3H[32mdouble[39m(B[m d = 1ull << d_shift;[12;3H[32mdouble[39m(B[m d1 = d + diff;[13;3H[32mconst[39m(B[m [32mchar[39m(B[m *d_indistinguishable = (d == d1) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[14;3Hprintf((B[0;1m[33m"for d = 2**%d, indisguishable(d, d + %d) == %s\n"[39m(B[m,[15;10Hd_shift, ([32mint[39m(B[m)diff, d_indistinguishable);[17;3H[32mconst[39m(B[m [32munsigned[39m(B[m f_shift = (B[0;1m[37m[43mTODO[39;49m(B[m;[18;3H[32mfloat[39m(B[m f = 1ull << f_shift;[19;3H[32mfloat[39m(B[m f1 = f + diff;[20;3H[32mconst[39m(B[m [32mchar[39m(B[m *f_indistinguishable = (f == f1) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[21;3Hprintf((B[0;1m[33m"for f = 2**%d, indisguishable(f, f + %d) == %s\n"[39m(B[m,[22;10Hf_shift, ([32mint[39m(B[m)diff, f_indistinguishable);[23d}[2d[?12l[?25h[?25l[1;109H(B[0;7m*[189G(B[m[2;54r[54;1H
+[1;56r[53;1H[K[2d[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H[2S[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H[2S[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[K[?12l[?25h[?25l[54;86H(B[0;7m[ Nothing was cut ](B[m[?12l[?25h[2d[?25l(B[0;1m[36m#include[33m <stdio.h>[4d[36m#define[39m(B[m (B[0;1m[37m[43mTODO[39;49m(B[m 0[6d[32mint[39m(B[m main()[7d{[8d [32mconst[39m(B[m [32mdouble[39m(B[m diff = 500.0;[10;3H[32mconst[39m(B[m [32munsigned[39m(B[m d_shift = 62;[11;3H[32mdouble[39m(B[m d = 1ull << d_shift;[12;3H[32mdouble[39m(B[m d1 = d + diff;[13;3H[32mconst[39m(B[m [32mchar[39m(B[m *d_indistinguishable = (d == d1) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[14;3Hprintf((B[0;1m[33m"for d = 2**%d, indistinguishable(d, d + %d) == %s\n"[39m(B[m,[15;10Hd_shift, ([32mint[39m(B[m)diff, d_indistinguishable);[17;3H[32mconst[39m(B[m [32munsigned[39m(B[m f_shift = 33;[18;3H[32mfloat[39m(B[m f = 1ull << f_shift;[19;3H[32mfloat[39m(B[m f1 = f + diff;[20;3H[32mconst[39m(B[m [32mchar[39m(B[m *f_indistinguishable = (f == f1) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[21;3Hprintf((B[0;1m[33m"for f = 2**%d, indistinguishable(f, f + %d) == %s\n"[39m(B[m,[22;10Hf_shift, ([32mint[39m(B[m)diff, f_indistinguishable);[23d}[54d[K[23d}[?12l[?25h[?25l[54d(B[0;7mSave modified buffer? [167b [55;1H Y(B[m Yes[K[56d(B[0;7m N(B[m No  [56;17H(B[0;7m^C(B[m Cancel[K[54;23H[?12l[?25h[?25l[55d(B[0;7m^G(B[m Help[55;48H(B[0;7mM-D(B[m DOS Format[55;95H(B[0;7mM-A(B[m Append[55;142H(B[0;7mM-B(B[m Backup File[56d(B[0;7m^C(B[m Cancel[17G [8b[56;48H(B[0;7mM-M(B[m Mac Format[56;95H(B[0;7mM-P(B[m Prepend[56;142H(B[0;7m^T(B[m Browse[54d(B[0;7mFile Name to Write: indistinguishable.c(B[m[?12l[?25h[?25l[54;88H[1K (B[0;7m[ Writing... ](B[m[K[1;109H(B[0;7m [189G(B[m[54;87H(B[0;7m[ Wrote 22 lines ](B[m[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/ulp[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/ulp[00m$ make
+[?2004lcc -g -Wall -std=c2x    ulp.c  -lm -o ulp
+cc -g -Wall -std=c2x -D USE_FLOAT ulp.c -lm -o float-ulp
+cc -g -Wall -std=c2x    indistinguishable.c  -lm -o indistinguishable
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/ulp[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/ulp[00m$ [7m./indistinguishable[27m./indistinguishable
+[?2004lfor d = 2**62, indistinguishable(d, d + 500) == true
+for f = 2**33, indistinguishable(f, f + 500) == true
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/ulp[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/ulp[00m$ [7mcd ..[27m
+[7mgit add .[27m
+[7mgit commit -m "completed ulp"[27m
+[7mgit push[27m[A[A[A]0;esurucu@remote06: ~/i220/submit/lab9-sol/ulp[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/ulp[00m$ cd ..
+git add .
+git commit -m "completed ulp"
+git push
+[?2004l[main a1bdd94] completed ulp
+ Committer: esurucu <esurucu@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 250 insertions(+), 5 deletions(-)
+Enumerating objects: 21, done.
+Counting objects:   5% (1/20)Counting objects:  10% (2/20)Counting objects:  15% (3/20)Counting objects:  20% (4/20)Counting objects:  25% (5/20)Counting objects:  30% (6/20)Counting objects:  35% (7/20)Counting objects:  40% (8/20)Counting objects:  45% (9/20)Counting objects:  50% (10/20)Counting objects:  55% (11/20)Counting objects:  60% (12/20)Counting objects:  65% (13/20)Counting objects:  70% (14/20)Counting objects:  75% (15/20)Counting objects:  80% (16/20)Counting objects:  85% (17/20)Counting objects:  90% (18/20)Counting objects:  95% (19/20)Counting objects: 100% (20/20)Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects:   9% (1/11)Compressing objects:  18% (2/11)Compressing objects:  27% (3/11)Compressing objects:  36% (4/11)Compressing objects:  45% (5/11)Compressing objects:  54% (6/11)Compressing objects:  63% (7/11)Compressing objects:  72% (8/11)Compressing objects:  81% (9/11)Compressing objects:  90% (10/11)Compressing objects: 100% (11/11)Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)Writing objects:  18% (2/11)Writing objects:  27% (3/11)Writing objects:  36% (4/11)Writing objects:  45% (5/11)Writing objects:  54% (6/11)Writing objects:  72% (8/11)Writing objects:  81% (9/11)Writing objects:  90% (10/11)Writing objects: 100% (11/11)Writing objects: 100% (11/11), 4.86 KiB | 553.00 KiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 6 local objects.[K
+To github.com:productefe/i220.git
+   4d83209..a1bdd94  main -> main
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol[00m$ [7mcd ~/i22
