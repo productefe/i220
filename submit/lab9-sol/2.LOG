@@ -68,4 +68,57 @@ nothing to commit, working tree clean
 Everything up-to-date
 [?2004h]0;esurucu@remote06: ~/i220/submit[01;32mesurucu@remote06[00m:[01;34m~/i220/submit[00m$ [7mcd ~/i220/submit/lab9-sol/inexact[27mcd ~/i220/submit/lab9-sol/inexact
 [?2004l[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ nano inexc[Kact.c
-[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;89H(B[0;7m[ Reading... ](B[m[54;87H(B[0;7m[ Read 23 lines ](B[m[H(B[0;7m  GNU nano 7.2 [78binexact.c [86b [1;189H(B[m[55d(B[0;7m^G(B[m Help[55;18H(B[0;7m^O(B[
+[?2004l[?2004h[?1049h[22;0;0t[1;56r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[54;89H(B[0;7m[ Reading... ](B[m[54;87H(B[0;7m[ Read 23 lines ](B[m[H(B[0;7m  GNU nano 7.2 [78binexact.c [86b [1;189H(B[m[55d(B[0;7m^G(B[m Help[55;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[55;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[55;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[56d(B[0;7m^X(B[m Exit[56;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[56;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[56;120H(B[0;7mM-6(B[m Copy[56;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[56;171H(B[0;7m^F(B[m Forward[2d(B[0;1m[36m#include[33m <math.h>[3d[36m#include[33m <stdio.h>[5d[36m#ifdef USE_FLOAT[6d(B[0m[32mtypedef[39m(B[m [32mfloat[39m(B[m Real;[7d(B[0;1m[36m#else[8d(B[0m[32mtypedef[39m(B[m [32mdouble[39m(B[m Real;[9d(B[0;1m[36m#endif[11d#define[39m(B[m (B[0;1m[37m[43mTODO[39;49m(B[m 0[13d(B[0;1m[34m// replace [37m[43mTODO[39;49m[34m below with 0.1[14d(B[0m[32mint[39m(B[m main() {[15;3H[32mconst[39m(B[m Real x = (B[0;1m[37m[43mTODO[39;49m(B[m;[15;36H(B[0;1m[34m//value being summed repeatedly[16;3H(B[0m[32mconst[39m(B[m [32mint[39m(B[m n = ceil(1.0/x);[35G(B[0;1m[34m//how many additions to sum to 1.0[17;3H[39m(B[mReal sum = 0;[18;3H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m j = 0; j < n; j++) {[19;5Hsum += x;[20;3H}[21d(B[0;1m[34m//sum should be x + x + ... + x (n-times); should be equal to 1[22;3H(B[0m[32mconst[39m(B[m [32mchar[39m(B[m * sum_is_one = (sum == 1.0) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[23;3Hprintf((B[0;1m[33m"%8g * %2d == %0.20f; sum-is-1: %s\n"[39m(B[m, x, n, sum, sum_is_one);[24d}[2d[?12l[?25h[?25l[1;104H(B[0;7m*[189G(B[m[?12l[?25h[2d(B[0;1m[31mK[33m#include <math.h>[C[39m(B[m[?25l[?12l[?25h(B[0;1m[31mKK[33m#include <math.h>[3G[39m(B[m[?25l[?12l[?25h(B[0;1m[31mKKK[33m#include <math.h>[4G[39m(B[m[?25l[?12l[?25h[1P[3G[?25l[?12l[?25h[1P[C[?25l[?12l[?25h(B[0;1m[36m#include[39m(B[m[1P[?25l[2;54r[54;1H
+[1;56r[53;1H[K[2d[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H[2S[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H[2S[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[2;54r[54;1H
+[1;56r[2;1H[?12l[?25h[?25l[K[?12l[?25h[?25l[54;86H(B[0;7m[ Nothing was cut ](B[m[?12l[?25h[2d[?25l[54;105H[?12l[?25h[2d[?25l(B[0;1m[36m#include[33m <math.h>[3d[36m#include[33m <stdio.h>[5d[36m#ifdef USE_FLOAT[6d(B[0m[32mtypedef[39m(B[m [32mfloat[39m(B[m Real;[7d(B[0;1m[36m#else[8d(B[0m[32mtypedef[39m(B[m [32mdouble[39m(B[m Real;[9d(B[0;1m[36m#endif[11d#define[39m(B[m (B[0;1m[37m[43mTODO[39;49m(B[m 0[13d(B[0;1m[34m// replace [37m[43mTODO[39;49m[34m below with 0.1[14d(B[0m[32mint[39m(B[m main() {[15;3H[32mconst[39m(B[m Real x = 0.1;[15;32H(B[0;1m[34m//value being summed repeatedly[16;3H(B[0m[32mconst[39m(B[m [32mint[39m(B[m n = ceil(1.0/x);   (B[0;1m[34m//how many additions to sum to 1.0[17;3H[39m(B[mReal sum = 0;[18;3H(B[0;1m[33mfor[39m(B[m ([32mint[39m(B[m j = 0; j < n; j++) {[19;5Hsum += x;[20;3H}[21d(B[0;1m[34m//sum should be x + x + ... + x (n-times); should be equal to 1[22;3H(B[0m[32mconst[39m(B[m [32mchar[39m(B[m * sum_is_one = (sum == 1.0) ? (B[0;1m[33m"true"[39m(B[m : (B[0;1m[33m"false"[39m(B[m;[23;3Hprintf((B[0;1m[33m"%8g * %2d == %0.20f; sum-is-1: %s\n"[39m(B[m, x, n, sum, sum_is_one);[24d}[54d[K[24d}[?12l[?25h[?25l[54d(B[0;7mSave modified buffer? [167b [55;1H Y(B[m Yes[K[56d(B[0;7m N(B[m No  [56;17H(B[0;7m^C(B[m Cancel[K[54;23H[?12l[?25h[?25l[55d(B[0;7m^G(B[m Help[55;48H(B[0;7mM-D(B[m DOS Format[55;95H(B[0;7mM-A(B[m Append[55;142H(B[0;7mM-B(B[m Backup File[56d(B[0;7m^C(B[m Cancel[17G [8b[56;48H(B[0;7mM-M(B[m Mac Format[56;95H(B[0;7mM-P(B[m Prepend[56;142H(B[0;7m^T(B[m Browse[54d(B[0;7mFile Name to Write: inexact.c(B[m[?12l[?25h[?25l[54;88H[1K (B[0;7m[ Writing... ](B[m[K[1;104H(B[0;7m [189G(B[m[54;87H(B[0;7m[ Wrote 23 lines ](B[m[J[56d[?12l[?25h[56;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ make
+[?2004lgcc -g -Wall -std=c2x    inexact.c  -lm -o inexact
+gcc -g -Wall -std=c2x -D USE_FLOAT inexact.c -lm -o float-inexact
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$  [7mscript 3.LOG[27m[1Pscript 3.LO[K[K[K[K[K[K[K[K[K[K[K[K[7mscript 3.LOG[27mscript 3.LOG
+[?2004lScript started, output log file is '3.LOG'.
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ [7m./float-inexact[27m./float-inexact
+[?2004l     0.1 * 10 == 1.00000011920928955078; sum-is-1: false
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ [7m./inexact[27m./inexact
+[?2004l     0.1 * 10 == 0.99999999999999988898; sum-is-1: false
+[?2004h]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ [7mcd ..[27m
+[7mgit add .[27m
+[7mgit commit -m "completed inexact"[27m
+[7mgit push[27m[A[A[A]0;esurucu@remote06: ~/i220/submit/lab9-sol/inexact[01;32mesurucu@remote06[00m:[01;34m~/i220/submit/lab9-sol/inexact[00m$ cd ..
+git add .
+git commit -m "completed inexact"
+git push
+[?2004l[main 4104ca1] completed inexact
+ Committer: esurucu <esurucu@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 73 insertions(+), 2 deletions(-)
+ create mode 100644 submit/lab9-sol/inexact/3.LOG
+Enumerating objects: 13, done.
+Counting objects:   7% (1/13)Counting objects:  15% (2/13)Counting objects:  23% (3/13)Counting objects:  30% (4/13)Counting objects:  38% (5/13)Counting objects:  46% (6/13)Counting objects:  53% (7/13)Counting objects:  61% (8/13)Counting objects:  69% (9/13)Counting objects:  76% (10/13)Counting objects:  84% (11/13)Counting objects:  92% (12/13)Counting objects: 100% (13/13)Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects:  14% (1/7)Compressing objects:  28% (2/7)Compressing objects:  42% (3/7)Compressing objects:  57% (4/7)Compressing objects:  71% (5/7)Compressing objects:  85% (6/7)Compressing objects: 100% (7/7)Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85%
