@@ -28,7 +28,9 @@ rotate_left(unsigned val, int shift)
 inline unsigned
 rotate_right(unsigned val, int shift)
 {
-  //TODO
+  unsigned right_bits = val >> shift;
+  unsigned left_bits = val << (sizeof(val)*CHAR_BIT - shift);
+  return right_bits | left_bits;
   return 0;
 }
 

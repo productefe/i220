@@ -25,8 +25,24 @@ get_cpuid:
 #edi = op, rsi = eaxP, rdx = ebxP, rcx = edxP, r8 = ecxP	
 	.globl info_cpuid
 info_cpuid:
-	#TODO
-	ret
-	
+    push    %rbx
+    pushq   %rcx
+    pushq   %rdx
+
+    movl    %edi, %eax
+    cpuid
+
+    movl    %eax, (%rsi)
+
+    popq    %rax
+    movl    %ebx, (%rax)
+
+    popq    %rax
+    movl    %edx, (%rax)
+
+    movl    %ecx, (%r8)
+
+    pop     %rbx
+    ret	
 .section .note.GNU-stack,"",@progbits
 	
