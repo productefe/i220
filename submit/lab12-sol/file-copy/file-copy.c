@@ -3,12 +3,23 @@
 #include <stdlib.h>
 #include <string.h>
 
+/** wrapper around fgetc() to force error */
+static int
+fgetc_err(FILE *stream)
+{
+  static int is_ok = 1;
+  int c = (is_ok) ? fgetc(stream) : EOF;
+  is_ok = 0;
+  errno = EBADF;
+  return c;
+}
+
 static int
 do_copy(const char *inName, FILE *in, const char *outName, FILE *out)
 {
   int c;
 
-  while ((c = fgetc(in)) != EOF) {
+  while ((c = fgetc_err(in)) != EOF) {
     if (fputc(c, out) == EOF) {
       fprintf(stderr, "cannot write %s: %s\n",
               outName, strerror(errno));
@@ -16,13 +27,9 @@ do_copy(const char *inName, FILE *in, const char *outName, FILE *out)
     }
   }
 
-  if (ferror(in)) {
-    fprintf(stderr, "cannot read %s: %s\n",
-            inName, strerror(errno));
-    return 1;
-  }
-
-  return 0;
+  fprintf(stderr, "i/o error reading from %s: %s\n",
+          inName, strerror(errno));
+  return 1;
 }
 
 int
@@ -51,15 +58,8 @@ main(int argc, const char *argv[])
 
   int status = do_copy(srcName, in, destName, out);
 
-  if (fclose(in) != 0) {
-    fprintf(stderr, "cannot read %s: %s\n", srcName, strerror(errno));
-    exit(1);
-  }
-
-  if (fclose(out) != 0) {
-    fprintf(stderr, "cannot write %s: %s\n", destName, strerror(errno));
-    exit(1);
-  }
+  fclose(in);
+  fclose(out);
 
   return status;
 }
