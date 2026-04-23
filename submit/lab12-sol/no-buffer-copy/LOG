@@ -1,0 +1,17 @@
+Script started on 2026-04-23 16:37:07-04:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="56"]
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab12-sol/no-buffer-copy[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab12-sol/no-buffer-copy[00m$ [7mtime ./no-buffer-copy `which gcc` /dev/null 1[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime ./no-buffer-copy `which gcc` /dev/null 1
+[A
+[?2004l
+real	0m0.018s
+user	0m0.010s
+sys	0m0.000s
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab12-sol/no-buffer-copy[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab12-sol/no-buffer-copy[00m$ [7mtime ./no-buffer-copy `which gcc` /dev/null 0[27mtime ./no-buffer-copy `which gcc` /dev/null 0
+[?2004l
+real	0m1.202s
+user	0m0.269s
+sys	0m0.927s
+[?2004h]0;esurucu@remote02: ~/i220/submit/lab12-sol/no-buffer-copy[01;32mesurucu@remote02[00m:[01;34m~/i220/submit/lab12-sol/no-buffer-copy[00m$ [?2004l
+exit
+
+Script done on 2026-04-23 16:37:31-04:00 [COMMAND_EXIT_CODE="0"]
