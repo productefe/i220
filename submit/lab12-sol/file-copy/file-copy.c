@@ -10,14 +10,14 @@ do_copy(const char *inName, FILE *in, const char *outName, FILE *out)
 
   while ((c = fgetc(in)) != EOF) {
     if (fputc(c, out) == EOF) {
-      fprintf(stderr, "error writing to %s: %s\n",
+      fprintf(stderr, "cannot write %s: %s\n",
               outName, strerror(errno));
       return 1;
     }
   }
 
   if (ferror(in)) {
-    fprintf(stderr, "i/o error reading from %s: %s\n",
+    fprintf(stderr, "cannot read %s: %s\n",
             inName, strerror(errno));
     return 1;
   }
@@ -51,8 +51,15 @@ main(int argc, const char *argv[])
 
   int status = do_copy(srcName, in, destName, out);
 
-  fclose(in);
-  fclose(out);
+  if (fclose(in) != 0) {
+    fprintf(stderr, "cannot read %s: %s\n", srcName, strerror(errno));
+    exit(1);
+  }
+
+  if (fclose(out) != 0) {
+    fprintf(stderr, "cannot write %s: %s\n", destName, strerror(errno));
+    exit(1);
+  }
 
   return status;
 }
